@@ -1,0 +1,36 @@
+{
+  "name": "seabookwebautomatedregressiontest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nightwatch.js",
+  "bin": {
+    "seabookwebautomatedtest": "globals.js"
+  },
+  "scripts": {
+    "test:server:regression": "cross-env RUNNING_ENV=server npm run test:regression",
+    "test:server:agent": "cross-env RUNNING_ENV=server npm run test:agent",
+    "test:server:tag": "cross-env RUNNING_ENV=server npm run test:tag",
+    "test:server:all": "cross-env RUNNING_ENV=server npm run test:all",
+    "test:test": "node nightwatch.js -c ./config/nightwatch.conf.js -e default --group test",
+    "test:tag": "node nightwatch.js -c ./config/nightwatch.conf.js -e default --tag",
+    "test:regression": "node nightwatch.js -c ./config/nightwatch.conf.js -e default --group regression",
+    "test:templates": "node nightwatch.js -c ./config/nightwatch.conf.js -e default --group templates",
+    "test:all": "node nightwatch.js -c ./config/nightwatch.conf.js -e default",
+    "test:consumer": "npm run test:tag consumer",
+    "test:agent": "npm run test:tag agent",
+    "test:flow": "npm run test:tag flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dfds.visualstudio.com/DefaultCollection/SeabookWeb/_git/SeabookWebAutomatedTest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "*",
+    "cross-env": "^1.0.7",
+    "nightwatch": "^0.9.6",
+    "request": "^2.69.0",
+    "selenium-server": "^2.53.1"
+  }
+}

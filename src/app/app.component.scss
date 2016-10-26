@@ -1,0 +1,21 @@
+@import '//header/_header.component.scss';
+@import '//footer/_footer.component.scss';
+@import '//home/_home.component.scss';
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:lightgray;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    margin: 0 0 100px;
+    padding: 25px;
+}
+
+span.active {
+    background-color: gray;
+}

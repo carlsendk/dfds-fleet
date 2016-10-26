@@ -1,0 +1,20 @@
+<div *ngIf="ship">
+  <h2>DFDS Ship details</h2>
+  <div>
+    <label>id: </label>{{ship.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="ship.name" placeholder="Name of ship" />
+  </div>
+  <div>
+    <label>built: </label>
+    <input [(ngModel)]="ship.built" placeholder="Year it was built" />
+  </div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="ship.tonnage" placeholder="Ship capacity" />
+  </div>
+  <div *ngIf="!ship">
+    <button (click)="goBack()">Back</button>
+  </div>
+</div>

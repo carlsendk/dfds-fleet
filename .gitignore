@@ -1,0 +1,15 @@
+/__build__
+/__server_build__
+/node_modules
+/typings
+/tsd_typings
+/dist
+/coverage
+/reports
+.vscode/*
+!.vscode/launch.json
+
+npm-debug.log
+
+/e2e/node_modules
+/e2e/reports

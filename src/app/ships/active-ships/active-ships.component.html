@@ -1,0 +1,7 @@
+<h2>DFDS Ships</h2>
+<ul>
+  <li *ngFor="let ship of activeShips">
+    <a routerLink='details/{{ship.id}}'>{{ship.name}}</a> 
+  </li>
+</ul>
+<a routerLink='/former-ships'>Former ships</a>
